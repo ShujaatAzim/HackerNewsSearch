@@ -49,7 +49,7 @@ const SearchPage = () => {
             <h4>Showing results for "{lastSearched}"</h4>
             <ul>
               {articles.map(article => {
-                return (
+                return article.title && (
                   <li key={article.objectID}><a href={article.url} target="_blank" rel="noreferrer">{article.title}</a></li>
                 )
               })}
